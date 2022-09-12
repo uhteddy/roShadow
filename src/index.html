@@ -1,0 +1,19 @@
+<body>
+
+    <header id="titlebar"></header>
+  
+    <div id="main">
+      <h1>Hello World!</h1>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+  
+    <script>
+      require('./renderer.js')
+        var Titlebar = require("custom-electron-titlebar");
+
+        window.addEventListener('DOMContentLoaded', () => {
+        // Title bar implemenation
+        new Titlebar();
+        });
+    </script>
+  </body>
