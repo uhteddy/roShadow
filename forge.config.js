@@ -9,9 +9,19 @@ module.exports = {
                 owner: 'uhTeddy',
                 name: 'roShadow'
               },
-              authToken: PROCCESS.ENV.GITHUB_TOKEN,
+              authToken: process.env.GITHUB_TOKEN,
               prerelease: true
             }
           }
-    ]
+    ],
+    makers: [
+        {
+            name: '@electron-forge/maker-squirrel',
+            platforms: ["win32"],
+            config: {
+                name: "roShadow",
+            }
+        }
+    ],
+    buildIdentifier: 'com.uhteddy.roshadow'
   }

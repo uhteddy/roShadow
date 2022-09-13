@@ -31,33 +31,7 @@
   },
   "homepage": "https://github.com/uhteddy/roShadow#readme",
   "config": {
-    "forge": {
-      "packagerConfig": {
-        "icon": "/src/assets/roShadow.png"
-      },
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "roShadow"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ]
-    }
+    "forge": "./forge.config.js"
   },
   "dependencies": {
     "custom-electron-titlebar": "^4.1.0",
@@ -69,6 +43,7 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.66",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.66",
     "@electron-forge/maker-zip": "^6.0.0-beta.66",
+    "@electron-forge/publisher-github": "^6.0.0-beta.66",
     "dotenv": "^16.0.2",
     "electron": "20.1.3"
   }
