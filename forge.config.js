@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
     publishers: [
         {
@@ -7,7 +9,7 @@ module.exports = {
                 owner: 'uhTeddy',
                 name: 'roShadow'
               },
-              authToken: PROCCESS.ENV.GITHUB_AUTH,
+              authToken: PROCCESS.ENV.GITHUB_TOKEN,
               prerelease: true
             }
           }
