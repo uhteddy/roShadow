@@ -15,13 +15,13 @@ module.exports = {
           }
     ],
     makers: [
-        {
-            name: '@electron-forge/maker-squirrel',
-            platforms: ["win32"],
-            config: {
-                name: "roShadow",
-            }
+      {
+        name: '@electron-forge/maker-wix',
+        config: {
+          language: 1033,
+          manufacturer: 'roShadow'
         }
+      },
     ],
     buildIdentifier: 'com.uhteddy.roshadow'
   }

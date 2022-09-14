@@ -1,6 +1,5 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
-const { setupTitlebar, attachTitlebarToWindow } = require("custom-electron-titlebar/main");
 
 require('update-electron-app')()
 
@@ -10,13 +9,18 @@ if (require('electron-squirrel-startup')) {
   app.quit();
 }
 
-setupTitlebar();
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
-    icon: "images/roShadow.png",
+    width: 400,
+    height: 500,
+    minimizable: false,
+    icon: path.join(__dirname, 'assets/roShadow.ico'),
+    maximizable: false,
+    fullScreenable: false,
+    resizable: false,
+    title: `roShadow - ${app.getVersion()}`,
+    autoHideMenuBar: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
@@ -24,7 +28,6 @@ const createWindow = () => {
 
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
-  attachTitlebarToWindow(mainWindow);
 };
 
 // This method will be called when Electron has finished

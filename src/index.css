@@ -1,7 +1,28 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif;
-  margin: auto;
-  max-width: 38rem;
-  padding: 2rem;
+  background-color: #d4d4d4;
+}
+
+div.header-block {
+  padding-left: 1rem;
+}
+
+h1.title {
+  margin-bottom: 0px;
+}
+
+p.subtitle {
+  margin-top: 0px;
+}
+
+div.shadow-holder {
+  width: 100%;
+}
+
+div.shadow-block {
+  width: 150px;
+  height: 150px;
+  align-self: center;
+  background-color: rgb(250, 250, 250);
 }
